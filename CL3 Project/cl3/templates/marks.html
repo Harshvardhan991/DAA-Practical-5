@@ -1,0 +1,84 @@
+<html>
+    <head>
+        {% include "index.html" %}
+        <title>marks</title>
+        <p>
+            <b>
+                PLEASE FILL THE MARK DETAIL'S
+            </b>
+        </p>
+        <style>
+            h1 {
+              color: blue;
+              font-family: verdana;
+              font-size: 300%;
+            
+            }
+            p  {
+              color: red;
+              font-family: courier;
+              font-size: 160%;
+              text-align:center;
+            }
+            
+            
+            body {
+              background-color: powderblue;
+            }
+            h1 {
+              color: blue;
+            }
+            p {
+              color:rgb(231, 107, 107);
+            }
+            </style>
+    </head>
+    <body>
+        <form method = "POST" action={% url 'mar' %}>
+            {% csrf_token %}
+        {% comment %} <label>Reg No</label>
+        <input type = "text" name = "regno"><br>
+        <label>Subject</label>
+        <input type = "text" name = "subject"><br>
+        <label>Mark</label>
+        <input type = "text" name = "mark"><br>
+        <label>Semester</label>
+        <input type = "text" name = "semester"><br>
+        <label>Year</label>
+        <input type = "text" name = "year"><br>
+        <input type = "submit" value = "save"> {% endcomment %}
+       
+        <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">REG NO</label>
+          <input type="text" class="form-control" name = "regno" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">SUBJECT</label>
+            <input type="text" class="form-control" name = "subject" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">MARKS</label>
+          <input type="text" class="form-control" name = "mark" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">SEMESTER</label>
+          <input type="text" class="form-control" name = "semester" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">YEAR</label>
+          <input type="text" class="form-control" name = "year" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form> 
+    </body>
+    <footer>
+        <p>
+            THANK YOU......
+        </p>
+    </footer>
+</html>

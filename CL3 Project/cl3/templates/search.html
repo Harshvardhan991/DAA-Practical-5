@@ -1,0 +1,107 @@
+<htmp <DOCTYPE!>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>feedback</title>
+            {% include "index.html" %}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <p>
+              <b>
+                  SEARCH STUDENT INFO
+              </b>
+          </p>
+         <style>
+            .myTable { 
+              width: 40%;
+              text-align: left;
+              background-color: lemonchiffon;
+              border-collapse: collapse; 
+              }
+            .myTable th { 
+              background-color: lightblue;
+              color: red; 
+              }
+            .myTable td, 
+            .myTable th { 
+              padding: 10px;
+              border: 2px solid goldenrod; 
+              }
+    
+              .myTable1 { 
+              width: 40%;
+              text-align: left;
+              background-color: lightblue;
+              border-collapse: collapse; 
+              }
+            .myTable1 th { 
+              background-color: goldenrod;
+              color: white; 
+              }
+            .myTable1 td, 
+            .myTable1 th { 
+              padding: 10px;
+              border: 2px solid goldenrod; 
+              }
+    
+              hr{
+              color: #f00;
+            background-color: #f00;
+            height: 5px;
+              }
+              h1 {
+                color: blue;
+                font-family: verdana;
+                font-size: 300%;
+              
+              }
+              p  {
+                color:rgb(231, 107, 107);
+                font-family: courier;
+                text-align:center;
+                font-size: 160%;
+              }
+              
+              
+              body {
+                background-color: powderblue;
+              }
+              h1 {
+                color: blue;
+              }
+              p {
+                color:rgb(231, 107, 107);
+              }
+            
+            </style>
+    
+    
+        </head>
+        <body>
+            <form method = "POST" action={% url 'search_stu' %}>
+                {% csrf_token %}
+            {% comment %} <label>Name</label>
+            <input type = "text" name = "sname"><br><br>
+            <label>Reg No</label>
+            <input type = "text" name = "regno"><br><br>
+            <label>Branch</label>
+            <input type = "text" name = "branch"><br><br>
+            <input type = "submit" value = "Submit"> {% endcomment %}
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">FULL NAME</label>
+              <input type="text" class="form-control" name = "sname" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">REG NO</label>
+              <input type="text" class="form-control" name = "regno" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">BRANCH</label>
+                <input type="text" class="form-control" name = "branch" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"></div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+        </form> 
+        </body>
+    </doctype>

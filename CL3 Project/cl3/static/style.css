@@ -1,0 +1,72 @@
+.black{
+    color: white;                                     
+    background-color:black;
+    padding: 5.5px;
+}
+body{
+  width:100%;
+  background-color:powderblue;
+  margin: 0 0 0 0;
+}
+p{
+  background-color:grey;
+  text-align:center;
+  color:rgb(2, 6, 41);
+  font-size: 35px;
+  padding:16px;
+
+}
+.card{
+    text-align: center;
+    margin: 0 250px 10px 450px;
+}
+.card h1{
+    background-color: powderblue;
+}
+.under_nav{
+    background-color:white;
+}
+.under_nav img{
+    width:80%;
+    padding: 0 104px;
+    margin: 0 0 0 110px;
+    text-align:center;
+    height: auto;
+}
+
+
+.whitel{
+    background-color: white;
+}
+.last img{
+    width:80%;
+    background-color: white;
+    text-align:center;
+    margin: 2px 0 0px 155px;
+    height:300px;
+}
+.lastblack{
+    background-color: black;
+}
+.lastblack h1,h2{
+    font-size: 15px;
+    margin:0 0 0 70px;
+    background-color: black;
+    display:inline;
+    color:white;
+}
+.lastblack h2{
+    margin: 0 0 0 0;
+    color:skyblue;
+}
+.lastblack h3{
+    font-size: 15px;
+    justify-content:space-between;
+    margin: 0 0 0 687px;
+    background-color: black;
+    display:inline;
+    color:white;
+}
+
+
+ 

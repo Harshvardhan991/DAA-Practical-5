@@ -1,0 +1,103 @@
+<html>
+    <head>
+        {% include "index.html" %}
+        <title>student</title>
+        <p>
+            <b>
+                PLEASE FILL THE FORM
+            </b>
+        </p>
+
+        <style>
+            h1 {
+              color: blue;
+              font-family: verdana;
+              font-size: 300%;
+            
+            }
+            p  {
+              color: red;
+              font-family: courier;
+              font-size: 160%;
+              text-align:center;
+            }
+            
+            
+            body {
+              background-color: powderblue;
+            }
+            h1 {
+              color: blue;
+            }
+            p {
+              color:rgb(231, 107, 107);
+            }
+            </style>
+    </head>
+    <body>
+        <div>
+            <form method = "POST" action={% url 'stu' %}>
+                {% csrf_token %}
+            {% comment %} <label>Enter Name</label>
+            <input type = "text" name = "name"><br>
+            <label>Reg No</label>
+            <input type = "text" name = "regno"><br>
+            <label>Address</label>
+            <input type = "text" name = "address"><br>
+            <label>Taluka</label>
+            <input type = "text" name = "taluka"><br>
+            <label>District</label>
+            <input type = "text" name = "district"><br>
+            <label>State</label>
+            <input type = "text" name = "state"><br>
+            <label>Pin Code</label>
+            <input type = "text" name = "pincode"><br>
+            <input type = "submit" placeholder="submit"> {% endcomment %}
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">FULL NAME</label>
+              <input type="text" class="form-control" name = "name" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">REG NO</label>
+                <input type="text" class="form-control" name = "regno" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"></div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">ADDRESS</label>
+                  <input type="text" class="form-control" name = "address" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text"></div>
+                </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">TALUKA</label>
+                <input type="text" class="form-control" name = "taluka" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"></div>
+              </div>
+              <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">DISTRICT</label>
+                <input type="text" class="form-control" name = "district" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"></div>
+              </div>
+              <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">STATE</label>
+                <input type="text" class="form-control" name = "state" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"></div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">PINCODE</label>
+                <input type="text" class="form-control" name = "pincode" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"></div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form> 
+        </div>
+    </body>
+    <footer>
+        <p>
+            THANK YOU......
+        </p>
+    </footer>
+</html>
+    
+
+

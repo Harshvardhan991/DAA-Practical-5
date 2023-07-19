@@ -1,0 +1,25 @@
+<html>
+    {% include "index.html" %}
+    <style>
+        body{
+            text-align:center;
+            background-color:powderblue;
+        }
+        b{
+            color:rgb(231, 107, 107);
+        }
+       
+    </style>
+    <body>
+        <h1>
+            {{ message }}
+            <br>
+            <b>
+              THANK YOU...!!
+            </b>
+        </h1>
+        <br>
+        {% load static %}
+        <img src = "{% static 'congrats.jpeg' %}"
+    </body>
+    </html>

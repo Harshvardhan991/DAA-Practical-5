@@ -1,0 +1,108 @@
+<html>
+    <head>
+        {% include "index.html" %}
+        <title>admission</title>
+        <p>
+            <b>
+                PAYMENT REGISTRATION
+            </b>
+        </p>
+    <style>
+        .form login{
+            text-align:center;
+        }
+        p{
+            text-align:center;
+            color:rgb(231, 107, 107);
+        }
+        body{
+            background-color:powderblue;
+        }
+    </style>
+<body>
+<section class="container forms">
+    <div class="form login">
+        <div class="form-content">
+            <br>
+            <form method="post">
+                {% csrf_token %}
+                <!-- <div class="field input-field">
+                    <input type="text" placeholder="Full name" class="input" name="username">
+                </div>
+                <div class="field input-field">
+                    <input type="email" placeholder="Email" class="input" name="email">
+                </div>
+                <div class="field input-field">
+                    <input type="text" placeholder="Age" class="input" name="age">
+                </div>
+                <div class="field input-field">
+                    <input type="text" placeholder="Phone number" class="input" name="phone">
+                </div>
+                <div class="field input-field">
+                    <input type="text" placeholder="Amount" class="input" name="amount">
+                </div>
+                <div class="field button-field">
+                    <button type="submit" id="rzp-button1">Procced To Pay</button>
+                </div> -->
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">FULL NAME</label>
+                      <input type="text" class="form-control" name = "username" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">EMAIL</label>
+                        <input type="text" class="form-control" name = "email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text"></div>
+                      </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">AGE</label>
+                      <input type="text" class="form-control" name = "age" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">PHONE NUMBER</label>
+                      <input type="text" class="form-control" name = "phone" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">AMOUNT</label>
+                      <input type="text" class="form-control" name = "amount" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <button type="submit" id="rzp-button1" class="btn btn-primary">Proceed To Pay</button>
+                  
+            </form>
+        </div>
+    </div>
+<section class="pay">
+     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script>
+            var options = {
+                "key":"{{api_key}}",
+                "name": "SGGS FEES", //your business name
+                "description": "Buy Premium",
+                "order_id": "{{order_id}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+                "callback_url": "{% url 'thanks' %}",
+                "prefill": {
+                    "name": "Gaurav Kumar", //your customer's name
+                    "email": "gaurav.kumar@example.com",
+                    "contact": "9000090000"
+                },
+                "notes": {
+                    "address": "Razorpay Corporate Office"
+                },
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
+            var r = new Razorpay(options);
+            document.getElementById('rzp-button1').onclick = function (e) {
+                r.open();
+                e.preventDefault();
+            }
+        </script>
+</section>
+</body>
+</html>
+
